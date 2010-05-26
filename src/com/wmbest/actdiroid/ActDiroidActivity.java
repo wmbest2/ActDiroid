@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
 import android.util.Log;
+import android.content.Intent;
 
 public class ActDiroidActivity extends Activity
 {
@@ -50,6 +51,15 @@ public class ActDiroidActivity extends Activity
 				}
 			}
 
+		});
+
+		Button button = (Button) findViewById(R.id.login_button);
+		button.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View view) {
+				Intent intent = new Intent(ActDiroidActivity.this, ADSearchActivity.class);
+				ActDiroidActivity.this.startActivity(intent);
+			}
 		});
     }
 }
